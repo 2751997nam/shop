@@ -1,0 +1,1164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Contact us</title>
+    <meta name="description" content="Use our form to contact us">
+    <meta name="keywords" content="">
+    <link rel="alternate" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&amp;id_lang=1" hreflang="en-us">
+    <link rel="alternate" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&amp;id_lang=2" hreflang="ar-sa">
+    <link rel="alternate" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&amp;id_lang=4" hreflang="es-es">
+    <link rel="alternate" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&amp;id_lang=7" hreflang="fr-fr">
+    <link rel="alternate" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&amp;id_lang=8" hreflang="it-it">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/PRS08/PRS080194/PRS01/img/favicon.ico?1568191156">
+    <link rel="shortcut icon" type="image/x-icon" href="/PRS08/PRS080194/PRS01/img/favicon.ico?1568191156">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/theme.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/modules/productcomments//views/css/productcomments.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/modules/psblog/views/css/psblog.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/modules/psblog/views/css/lightbox.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/modules/stfeature/views/css/front.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/modules/tmcouponpop/views/css/tmcouponpop.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/js/jquery/ui/themes/base/minified/jquery-ui.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/js/jquery/ui/themes/base/minified/jquery.ui.theme.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/js/jquery/plugins/fancybox/jquery.fancybox.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/modules/tm_imageslider/views/css/flexslider.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/modules/tm_categorylist/views/css/tmcategorylist.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/assets/css/custom.css" type="text/css" media="all">
+    <script type="text/javascript">
+        var buttoncompare_title_add = "Add to Compare";
+        var buttoncompare_title_remove = "Remove from Compare";
+        var buttonwishlist_title_add = "Add to Wishlist";
+        var buttonwishlist_title_remove = "Remove from WishList";
+        var comparator_max_item = 3;
+        var compared_products = [];
+        var isLogged = false;
+        var prestashop = {
+            "cart": {
+                "products": [],
+                "totals": {
+                    "total": {
+                        "type": "total",
+                        "label": "Total",
+                        "amount": 0,
+                        "value": "$0.00"
+                    },
+                    "total_including_tax": {
+                        "type": "total",
+                        "label": "Total (tax incl.)",
+                        "amount": 0,
+                        "value": "$0.00"
+                    },
+                    "total_excluding_tax": {
+                        "type": "total",
+                        "label": "Total (tax excl.)",
+                        "amount": 0,
+                        "value": "$0.00"
+                    }
+                },
+                "subtotals": {
+                    "products": {
+                        "type": "products",
+                        "label": "Subtotal",
+                        "amount": 0,
+                        "value": "$0.00"
+                    },
+                    "discounts": null,
+                    "shipping": {
+                        "type": "shipping",
+                        "label": "Shipping",
+                        "amount": 0,
+                        "value": "Free"
+                    },
+                    "tax": {
+                        "type": "tax",
+                        "label": "Taxes",
+                        "amount": 0,
+                        "value": "$0.00"
+                    }
+                },
+                "products_count": 0,
+                "summary_string": "0 items",
+                "vouchers": {
+                    "allowed": 1,
+                    "added": []
+                },
+                "discounts": [],
+                "minimalPurchase": 0,
+                "minimalPurchaseRequired": ""
+            },
+            "currency": {
+                "name": "US Dollar",
+                "iso_code": "USD",
+                "iso_code_num": "840",
+                "sign": "$"
+            },
+            "customer": {
+                "lastname": null,
+                "firstname": null,
+                "email": null,
+                "birthday": null,
+                "newsletter": null,
+                "newsletter_date_add": null,
+                "optin": null,
+                "website": null,
+                "company": null,
+                "siret": null,
+                "ape": null,
+                "is_logged": false,
+                "gender": {
+                    "type": null,
+                    "name": null
+                },
+                "addresses": []
+            },
+            "language": {
+                "name": "English (English)",
+                "iso_code": "en",
+                "locale": "en-US",
+                "language_code": "en-us",
+                "is_rtl": "0",
+                "date_format_lite": "m\/d\/Y",
+                "date_format_full": "m\/d\/Y H:i:s",
+                "id": 1
+            },
+            "page": {
+                "title": "",
+                "canonical": null,
+                "meta": {
+                    "title": "Contact us",
+                    "description": "Use our form to contact us",
+                    "keywords": "",
+                    "robots": "index"
+                },
+                "page_name": "contact",
+                "body_classes": {
+                    "lang-en": true,
+                    "lang-rtl": false,
+                    "country-US": true,
+                    "currency-USD": true,
+                    "layout-left-column": true,
+                    "page-contact": true,
+                    "tax-display-disabled": true
+                },
+                "admin_notifications": []
+            },
+            "shop": {
+                "name": "Demo Store",
+                "logo": "\/PRS08\/PRS080194\/PRS01\/img\/demo-store-logo-1568191156.jpg",
+                "stores_icon": "\/PRS08\/PRS080194\/PRS01\/img\/logo_stores.png",
+                "favicon": "\/PRS08\/PRS080194\/PRS01\/img\/favicon.ico"
+            },
+            "urls": {
+                "base_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/",
+                "current_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=contact",
+                "shop_domain_url": "https:\/\/prestashop.templatemela.com",
+                "img_ps_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/img\/",
+                "img_cat_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/img\/c\/",
+                "img_lang_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/img\/l\/",
+                "img_prod_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/img\/p\/",
+                "img_manu_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/img\/m\/",
+                "img_sup_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/img\/su\/",
+                "img_ship_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/img\/s\/",
+                "img_store_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/img\/st\/",
+                "img_col_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/img\/co\/",
+                "img_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/themes\/PRS01\/assets\/img\/",
+                "css_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/themes\/PRS01\/assets\/css\/",
+                "js_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/themes\/PRS01\/assets\/js\/",
+                "pic_url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/upload\/",
+                "pages": {
+                    "address": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=address",
+                    "addresses": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=addresses",
+                    "authentication": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=authentication",
+                    "cart": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=cart",
+                    "category": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=category",
+                    "cms": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=cms",
+                    "contact": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=contact",
+                    "discount": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=discount",
+                    "guest_tracking": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=guest-tracking",
+                    "history": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=history",
+                    "identity": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=identity",
+                    "index": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php",
+                    "my_account": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=my-account",
+                    "order_confirmation": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=order-confirmation",
+                    "order_detail": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=order-detail",
+                    "order_follow": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=order-follow",
+                    "order": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=order",
+                    "order_return": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=order-return",
+                    "order_slip": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=order-slip",
+                    "pagenotfound": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=pagenotfound",
+                    "password": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=password",
+                    "pdf_invoice": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=pdf-invoice",
+                    "pdf_order_return": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=pdf-order-return",
+                    "pdf_order_slip": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=pdf-order-slip",
+                    "prices_drop": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=prices-drop",
+                    "product": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=product",
+                    "search": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=search",
+                    "sitemap": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=sitemap",
+                    "stores": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=stores",
+                    "supplier": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=supplier",
+                    "register": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=authentication&create_account=1",
+                    "order_login": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=order&login=1"
+                },
+                "alternative_langs": {
+                    "en-us": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=contact&id_lang=1",
+                    "ar-sa": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=contact&id_lang=2",
+                    "es-es": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=contact&id_lang=4",
+                    "fr-fr": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=contact&id_lang=7",
+                    "it-it": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=contact&id_lang=8"
+                },
+                "theme_assets": "\/PRS08\/PRS080194\/PRS01\/themes\/PRS01\/assets\/",
+                "actions": {
+                    "logout": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?mylogout="
+                },
+                "no_picture_image": {
+                    "bySize": {
+                        "cart_default": {
+                            "url": "https:\/\/themes/shop/PRS08/PRS080194/PRS01/img/p/en-default-cart_default.jpg",
+                            "width": 80,
+                            "height": 94
+                        },
+                        "small_default": {
+                            "url": "https:\/\/themes/shop/PRS08/PRS080194/PRS01/img/p/en-default-small_default.jpg",
+                            "width": 98,
+                            "height": 116
+                        },
+                        "home_default": {
+                            "url": "https:\/\/themes/shop/PRS08/PRS080194/PRS01/img/p/en-default-home_default.jpg",
+                            "width": 256,
+                            "height": 302
+                        },
+                        "medium_default": {
+                            "url": "https:\/\/themes/shop/PRS08/PRS080194/PRS01/img/p/en-default-medium_default.jpg",
+                            "width": 458,
+                            "height": 540
+                        },
+                        "large_default": {
+                            "url": "https:\/\/themes/shop/PRS08/PRS080194/PRS01/img/p/en-default-large_default.jpg",
+                            "width": 847,
+                            "height": 1000
+                        }
+                    },
+                    "small": {
+                        "url": "https:\/\/themes/shop/PRS08/PRS080194/PRS01/img/p/en-default-cart_default.jpg",
+                        "width": 80,
+                        "height": 94
+                    },
+                    "medium": {
+                        "url": "https:\/\/themes/shop/PRS08/PRS080194/PRS01/img/p/en-default-home_default.jpg",
+                        "width": 256,
+                        "height": 302
+                    },
+                    "large": {
+                        "url": "https:\/\/themes/shop/PRS08/PRS080194/PRS01/img/p/en-default-large_default.jpg",
+                        "width": 847,
+                        "height": 1000
+                    },
+                    "legend": ""
+                }
+            },
+            "configuration": {
+                "display_taxes_label": false,
+                "display_prices_tax_incl": false,
+                "is_catalog": false,
+                "show_prices": true,
+                "opt_in": {
+                    "partner": true
+                },
+                "quantity_discount": {
+                    "type": "discount",
+                    "label": "Discount"
+                },
+                "voucher_enabled": 1,
+                "return_enabled": 0
+            },
+            "field_required": [],
+            "breadcrumb": {
+                "links": [{
+                    "title": "Home",
+                    "url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php"
+                }, {
+                    "title": "Contact us",
+                    "url": "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?controller=contact"
+                }],
+                "count": 2
+            },
+            "link": {
+                "protocol_link": "https:\/\/",
+                "protocol_content": "https:\/\/"
+            },
+            "time": 1665736609,
+            "static_token": "03c08d5578608b627b076ae65b228852",
+            "token": "db7997ef707be25cc0e2f7ea69f050fc"
+        };
+        var productcompare_add = "The product has been added to list compare";
+        var productcompare_max_item = "You cannot add more than 3 product(s) to the product comparison";
+        var productcompare_remove = "The product was successfully removed from list compare";
+        var productcompare_url = "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?fc=module&module=stfeature&controller=productscompare&id_lang=1";
+        var productcompare_viewlistcompare = "View list compare";
+        var wishlist_add = "The product was successfully added to your wishlist";
+        var wishlist_cancel_txt = "Cancel";
+        var wishlist_confirm_del_txt = "Delete selected item?";
+        var wishlist_del_default_txt = "Cannot delete default wishlist";
+        var wishlist_email_txt = "Email";
+        var wishlist_loggin_required = "You must be logged in to manage your wishlist";
+        var wishlist_ok_txt = "Ok";
+        var wishlist_quantity_required = "You must enter a quantity";
+        var wishlist_remove = "The product was successfully removed from your wishlist";
+        var wishlist_reset_txt = "Reset";
+        var wishlist_send_txt = "Send";
+        var wishlist_send_wishlist_txt = "Send wishlist";
+        var wishlist_url = "https:\/\/prestashop.templatemela.com\/PRS08\/PRS080194\/PRS01\/index.php?fc=module&module=stfeature&controller=mywishlist&id_lang=1";
+        var wishlist_viewwishlist = "View your wishlist";
+    </script>
+</head>
+
+<body id="contact" className="lang-en country-us currency-usd layout-left-column page-contact tax-display-disabled">
+    <main id="page">
+        <header id="header">
+            <div className="header-banner">
+            </div>
+            <nav className="header-nav">
+                <div className="container">
+                    <div className="hidden-md-down">
+                        <div className="left-nav">
+
+
+                            <div id="tmcms1block">
+                                <div className="cms1"><a href="#"> <span className="header-deal">1st Time Buyer? Use "ONE" promocode to instantly get 10% OFF!</span> </a></div>
+                            </div>
+
+
+                        </div>
+                        <div className="right-nav">
+
+                            <div id="_desktop_user_info">
+                                <div className="user-info">
+                                    <a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=my-account" title="Log in to your customer account" rel="nofollow">
+                                        <i className="material-icons">&#xE899;</i>
+                                        <span className="hidden-md-down">Sign in</span>
+                                    </a>
+                                </div>
+                            </div>
+
+
+
+
+                            <div id="_desktop_currency_selector">
+                                <div className="currency-selector dropdown js-dropdown">
+
+                                    <span className="expand-more _gray-darker hidden-sm-down" data-toggle="dropdown">USD</span>
+                                    <a data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="hidden-sm-down">
+                                        <i className="material-icons expand-more">&#xE313;</i>
+                                    </a>
+                                    <ul className="dropdown-menu hidden-sm-down" aria-labelledby="currency-selector-label">
+                                        <li>
+                                            <a title="Euro" rel="nofollow" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&amp;id_lang=1&amp;SubmitCurrency=1&amp;id_currency=2" className="dropdown-item">EUR</a>
+                                        </li>
+                                        <li className="current">
+                                            <a title="US Dollar" rel="nofollow" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&amp;id_lang=1&amp;SubmitCurrency=1&amp;id_currency=1" className="dropdown-item">USD</a>
+                                        </li>
+                                    </ul>
+                                    <select className="link hidden-md-up" aria-labelledby="currency-selector-label">
+                                        <option value="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&amp;id_lang=1&amp;SubmitCurrency=1&amp;id_currency=2">EUR</option>
+                                        <option value="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&amp;id_lang=1&amp;SubmitCurrency=1&amp;id_currency=1" selected="selected">USD</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div id="_desktop_language_selector">
+                                <div className="language-selector-wrapper">
+
+                                    <div className="language-selector dropdown js-dropdown">
+                                        <span className="expand-more hidden-sm-down" data-toggle="dropdown">English</span>
+                                        <a data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="hidden-sm-down">
+                                            <i className="material-icons expand-more">&#xE313;</i>
+                                        </a>
+                                        <ul className="dropdown-menu hidden-sm-down" aria-labelledby="language-selector-label">
+                                            <li className="current">
+                                                <a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&id_lang=1" className="dropdown-item"><img src="/img/l/1.jpg" alt="en" />English</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&id_lang=2" className="dropdown-item"><img src="/img/l/2.jpg" alt="ar" />اللغة العربية</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&id_lang=4" className="dropdown-item"><img src="/img/l/4.jpg" alt="es" />Español</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&id_lang=7" className="dropdown-item"><img src="/img/l/7.jpg" alt="fr" />Français</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&id_lang=8" className="dropdown-item"><img src="/img/l/8.jpg" alt="it" />Italiano</a>
+                                            </li>
+                                        </ul>
+                                        <select className="link hidden-md-up" aria-labelledby="language-selector-label">
+                                            <option value="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&id_lang=1" selected="selected">English</option>
+                                            <option value="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&id_lang=2">اللغة العربية</option>
+                                            <option value="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&id_lang=4">Español</option>
+                                            <option value="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&id_lang=7">Français</option>
+                                            <option value="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact&id_lang=8">Italiano</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div className="hidden-lg-up text-xs-center mobile container">
+                        <div className="top-logo" id="_mobile_logo"></div>
+                        <div className="container menu-container">
+                            <div className="menu-icon">
+                                <div className="cat-title"> <i className="material-icons menu-open">&#xE5D2;</i></div>
+                            </div>
+                        </div>
+                        <div className="pull-xs-right" id="_mobile_cart"></div>
+                        <div className="pull-xs-right" id="_mobile_user_info"></div>
+                        <div className="clearfix"></div>
+                    </div>
+                </div>
+            </nav>
+            <div className="header-top">
+                <div className="container">
+                    <div className="header_logo hidden-md-down" id="_desktop_logo">
+                        <a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/">
+                            <img className="logo img-responsive" src="/img/demo-store-logo-1568191156.jpg" alt="Demo Store">
+                        </a>
+                    </div>
+
+                    <div id="_desktop_cart">
+                        <div className="blockcart cart-preview inactive" data-refresh-url="//prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?fc=module&amp;module=ps_shoppingcart&amp;controller=ajax&amp;id_lang=1">
+                            <div className="header blockcart-header dropdown js-dropdown">
+                                <a className="cartextra" rel="nofollow" href="//prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=cart&amp;action=show">
+                                    <div id="bgimage"></div>
+                                    <span className="cart-products-count">0</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="search_widget" className="col-lg-4 col-md-5 col-sm-12 search-widget" data-search-controller-url="//prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=search">
+                        <span className="search_button"></span>
+                        <div className="searchtoggle">
+                            <form method="get" action="//prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=search">
+                                <input type="hidden" name="controller" value="search">
+                                <input type="text" name="s" value="" placeholder="Search" aria-label="Search">
+                                <button type="submit">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div className="menu col-lg-8 col-md-7 js-top-menu position-static hidden-md-down" id="_desktop_top_menu">
+                        <ul className="top-menu" id="top-menu" data-depth="0">
+                            <li className="category" id="category-3">
+                                <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=3&amp;controller=category&amp;id_lang=1" data-depth="0">
+                                    <span className="pull-xs-right hidden-lg-up">
+                                        <span data-target="#top_sub_menu_33424" data-toggle="collapse" className="navbar-toggler collapse-icons">
+                                            <i className="material-icons add">&#xE313;</i>
+                                            <i className="material-icons remove">&#xE316;</i>
+                                        </span>
+                                    </span>
+                                    Bustier
+                                </a>
+                                <div className="popover sub-menu js-sub-menu collapse" id="top_sub_menu_33424">
+                                    <ul className="top-menu" data-depth="1">
+                                        <li className="category" id="category-4">
+                                            <a className="dropdown-item dropdown-submenu" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=4&amp;controller=category&amp;id_lang=1" data-depth="1">
+                                                <span className="pull-xs-right hidden-lg-up">
+                                                    <span data-target="#top_sub_menu_13401" data-toggle="collapse" className="navbar-toggler collapse-icons">
+                                                        <i className="material-icons add">&#xE313;</i>
+                                                        <i className="material-icons remove">&#xE316;</i>
+                                                    </span>
+                                                </span>
+                                                Camisole
+                                            </a>
+                                            <div className="collapse" id="top_sub_menu_13401">
+                                                <ul className="top-menu" data-depth="2">
+                                                    <li className="category" id="category-18">
+                                                        <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=18&amp;controller=category&amp;id_lang=1" data-depth="2">
+                                                            Jeans &amp; Jeggings
+                                                        </a>
+                                                    </li>
+                                                    <li className="category" id="category-19">
+                                                        <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=19&amp;controller=category&amp;id_lang=1" data-depth="2">
+                                                            T-Shirts &amp; Shirts
+                                                        </a>
+                                                    </li>
+                                                    <li className="category" id="category-20">
+                                                        <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=20&amp;controller=category&amp;id_lang=1" data-depth="2">
+                                                            Tops &amp; Tees
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div className="menu-banners">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="category" id="category-5">
+                                            <a className="dropdown-item dropdown-submenu" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=5&amp;controller=category&amp;id_lang=1" data-depth="1">
+                                                <span className="pull-xs-right hidden-lg-up">
+                                                    <span data-target="#top_sub_menu_89506" data-toggle="collapse" className="navbar-toggler collapse-icons">
+                                                        <i className="material-icons add">&#xE313;</i>
+                                                        <i className="material-icons remove">&#xE316;</i>
+                                                    </span>
+                                                </span>
+                                                Brassiere
+                                            </a>
+                                            <div className="collapse" id="top_sub_menu_89506">
+                                                <ul className="top-menu" data-depth="2">
+                                                    <li className="category" id="category-21">
+                                                        <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=21&amp;controller=category&amp;id_lang=1" data-depth="2">
+                                                            Kurtas &amp; Kurtis
+                                                        </a>
+                                                    </li>
+                                                    <li className="category" id="category-22">
+                                                        <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=22&amp;controller=category&amp;id_lang=1" data-depth="2">
+                                                            Anarkali Suits
+                                                        </a>
+                                                    </li>
+                                                    <li className="category" id="category-23">
+                                                        <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=23&amp;controller=category&amp;id_lang=1" data-depth="2">
+                                                            Party Gowns
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div className="menu-banners">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="category" id="category-17">
+                                            <a className="dropdown-item dropdown-submenu" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=17&amp;controller=category&amp;id_lang=1" data-depth="1">
+                                                <span className="pull-xs-right hidden-lg-up">
+                                                    <span data-target="#top_sub_menu_5407" data-toggle="collapse" className="navbar-toggler collapse-icons">
+                                                        <i className="material-icons add">&#xE313;</i>
+                                                        <i className="material-icons remove">&#xE316;</i>
+                                                    </span>
+                                                </span>
+                                                Teddy
+                                            </a>
+                                            <div className="collapse" id="top_sub_menu_5407">
+                                                <ul className="top-menu" data-depth="2">
+                                                    <li className="category" id="category-24">
+                                                        <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=24&amp;controller=category&amp;id_lang=1" data-depth="2">
+                                                            Frocks &amp; Dresses
+                                                        </a>
+                                                    </li>
+                                                    <li className="category" id="category-25">
+                                                        <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=25&amp;controller=category&amp;id_lang=1" data-depth="2">
+                                                            Traditional Wear
+                                                        </a>
+                                                    </li>
+                                                    <li className="category" id="category-26">
+                                                        <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=26&amp;controller=category&amp;id_lang=1" data-depth="2">
+                                                            Body Suits
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div className="menu-banners">
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div className="menu-banners">
+                                        <div className="menu-banner">
+                                            <img src="/img/c/3-0_thumb.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="category" id="category-6">
+                                <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=6&amp;controller=category&amp;id_lang=1" data-depth="0">
+                                    Corset
+                                </a>
+                            </li>
+                            <li className="category" id="category-9">
+                                <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=9&amp;controller=category&amp;id_lang=1" data-depth="0">
+                                    Panties
+                                </a>
+                            </li>
+                            <li className="category" id="category-10">
+
+                                <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=10&amp;controller=category&amp;id_lang=1" data-depth="0">
+                                    Nightgown
+                                </a>
+                            </li>
+                            <li className="category" id="category-11">
+                                <a className="dropdown-item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=11&amp;controller=category&amp;id_lang=1" data-depth="0">
+                                    Negligee
+                                </a>
+                            </li>
+                        </ul>
+                        <div className="clearfix"></div>
+                    </div>
+
+
+                    <div className="head-wishlist">
+                        <a className="ap-btn-wishlist dropdown-item" href="//prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?fc=module&module=stfeature&controller=mywishlist&id_lang=1" title="Wishlist" rel="nofollow">
+
+
+                        </a>
+                    </div>
+                    <div className="head-compare">
+                        <a className="ap-btn-compare dropdown-item" href="//prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?fc=module&module=stfeature&controller=productscompare&id_lang=1" title="Compare" rel="nofollow">
+
+
+                        </a>
+                    </div>
+                    <div id="mobile_top_menu_wrapper" className="row hidden-lg-up">
+                        <div className="mobile-menu-inner">
+                            <div className="menu-icon">
+                                <div className="cat-title title2"> <i className="material-icons menu-close">&#xE5CD;</i> </div>
+                            </div>
+                            <div className="js-top-menu mobile" id="_mobile_top_menu"></div>
+                            <div id="_mobile_currency_selector"></div>
+                            <div id="_mobile_language_selector"></div>
+                            <div id="_mobile_contact_link"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside id="notifications">
+            <div className="container">
+            </div>
+        </aside>
+        <div className="container">
+            <div id="breadcrumb_wrapper" className="left-column right-column col-sm-4 col-md-6">
+                <nav data-depth="2" className="breadcrumb hidden-sm-down">
+                    <div className="container">
+                        <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a itemprop="item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php">
+                                    <span itemprop="name">Home</span>
+                                </a>
+                                <meta itemprop="position" content="1">
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a itemprop="item" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact">
+                                    <span itemprop="name">Contact us</span>
+                                </a>
+                                <meta itemprop="position" content="2">
+                            </li>
+                        </ol>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <section id="wrapper">
+            <div className="container">
+                <div id="columns_inner">
+                    <div id="left-column" className="col-xs-12 col-sm-3">
+
+
+                        <div id="contact-rich" className="contact-rich block">
+                            <h4 className="block_title hidden-md-down">Store information</h4>
+                            <h4 className="block_title hidden-lg-up" data-target="#contact_rich_toggle" data-toggle="collapse">
+                                Store information
+                                <span className="pull-xs-right">
+                                    <span className="navbar-toggler collapse-icons">
+                                        <i className="material-icons add">&#xE313;</i>
+                                        <i className="material-icons remove">&#xE316;</i>
+                                    </span>
+                                </span>
+                            </h4>
+                            <div id="contact_rich_toggle" className="block_content collapse">
+                                <div className="contact_sub">
+                                    <div className="icon"><i className="material-icons">&#xE55F;</i></div>
+                                    <div className="data">Demo Store<br />42 Puffin street 12345 Puffinville france<br />United States</div>
+                                </div>
+                                <hr />
+                                <div className="contact_sub">
+                                    <div className="icon"><i className="material-icons">&#xE0CD;</i></div>
+                                    <div className="data">
+                                        Call us:<br />
+                                        <a href="tel:0123-456-789">0123-456-789</a>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div className="contact_sub">
+                                    <div className="icon"><i className="material-icons">&#xE158;</i></div>
+                                    <div className="data email">
+                                        Email us:<br />
+                                    </div>
+                                    <a href="/cdn-cgi/l/email-protection#5c2f3d30391c2533292e3f33312c3d3225723f3331"><span className="__cf_email__" data-cfemail="5c2f3d30391c2533292e3f33312c3d3225723f3331">[email&#160;protected]</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div className="block-categories block">
+                            <h4 className="block_title hidden-md-down">
+
+                                shop by category
+                            </h4>
+                            <h4 className="block_title hidden-lg-up" data-target="#block_categories_toggle" data-toggle="collapse">
+                                <a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=2&controller=category&id_lang=1">Home</a>
+                                <span className="pull-xs-right">
+                                    <span className="navbar-toggler collapse-icons">
+                                        <i className="material-icons add">&#xE313;</i>
+                                        <i className="material-icons remove">&#xE316;</i>
+                                    </span>
+                                </span>
+                            </h4>
+                            <div id="block_categories_toggle" className="block_content collapse">
+                                <ul className="category-top-menu">
+                                    <li>
+                                        <ul className="category-sub-menu">
+                                            <li data-depth="0"><a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=3&amp;controller=category&amp;id_lang=1">Bustier</a>
+                                                <div className="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar3"><i className="material-icons add">&#xE145;</i><i className="material-icons remove">&#xE15B;</i></div>
+                                                <div className="collapse" id="exCollapsingNavbar3">
+                                                    <ul className="category-sub-menu">
+                                                        <li data-depth="1"><a className="category-sub-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=4&amp;controller=category&amp;id_lang=1">Camisole</a><span className="arrows" data-toggle="collapse" data-target="#exCollapsingNavbar4"><i className="material-icons arrow-right">&#xE145;</i><i className="material-icons arrow-down">&#xE15B;</i></span>
+                                                            <div className="collapse" id="exCollapsingNavbar4">
+                                                                <ul className="category-sub-menu">
+                                                                    <li data-depth="2"><a className="category-sub-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=18&amp;controller=category&amp;id_lang=1">Jeans &amp; Jeggings</a></li>
+                                                                    <li data-depth="2"><a className="category-sub-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=19&amp;controller=category&amp;id_lang=1">T-Shirts &amp; Shirts</a></li>
+                                                                    <li data-depth="2"><a className="category-sub-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=20&amp;controller=category&amp;id_lang=1">Tops &amp; Tees</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li data-depth="1"><a className="category-sub-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=5&amp;controller=category&amp;id_lang=1">Brassiere</a><span className="arrows" data-toggle="collapse" data-target="#exCollapsingNavbar5"><i className="material-icons arrow-right">&#xE145;</i><i className="material-icons arrow-down">&#xE15B;</i></span>
+                                                            <div className="collapse" id="exCollapsingNavbar5">
+                                                                <ul className="category-sub-menu">
+                                                                    <li data-depth="2"><a className="category-sub-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=21&amp;controller=category&amp;id_lang=1">Kurtas &amp; Kurtis</a></li>
+                                                                    <li data-depth="2"><a className="category-sub-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=22&amp;controller=category&amp;id_lang=1">Anarkali Suits</a></li>
+                                                                    <li data-depth="2"><a className="category-sub-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=23&amp;controller=category&amp;id_lang=1">Party Gowns</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li data-depth="1"><a className="category-sub-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=17&amp;controller=category&amp;id_lang=1">Teddy</a><span className="arrows" data-toggle="collapse" data-target="#exCollapsingNavbar17"><i className="material-icons arrow-right">&#xE145;</i><i className="material-icons arrow-down">&#xE15B;</i></span>
+                                                            <div className="collapse" id="exCollapsingNavbar17">
+                                                                <ul className="category-sub-menu">
+                                                                    <li data-depth="2"><a className="category-sub-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=24&amp;controller=category&amp;id_lang=1">Frocks &amp; Dresses</a></li>
+                                                                    <li data-depth="2"><a className="category-sub-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=25&amp;controller=category&amp;id_lang=1">Traditional Wear</a></li>
+                                                                    <li data-depth="2"><a className="category-sub-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=26&amp;controller=category&amp;id_lang=1">Body Suits</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li data-depth="0"><a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=6&amp;controller=category&amp;id_lang=1">Corset</a></li>
+                                            <li data-depth="0"><a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=9&amp;controller=category&amp;id_lang=1">Panties</a></li>
+                                            <li data-depth="0"><a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=10&amp;controller=category&amp;id_lang=1">Nightgown</a></li>
+                                            <li data-depth="0"><a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=11&amp;controller=category&amp;id_lang=1">Negligee</a></li>
+                                            <li data-depth="0"><a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=12&amp;controller=category&amp;id_lang=1">Electronic</a></li>
+                                            <li data-depth="0"><a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=13&amp;controller=category&amp;id_lang=1">Smartphones</a></li>
+                                            <li data-depth="0"><a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=14&amp;controller=category&amp;id_lang=1">Televison</a></li>
+                                            <li data-depth="0"><a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=15&amp;controller=category&amp;id_lang=1">Digital camera</a></li>
+                                            <li data-depth="0"><a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_category=16&amp;controller=category&amp;id_lang=1">Furniture</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div id="tmleftbanner" className="block">
+                            <ul className="hidden-md-down">
+                                <li className="slide tmleftbanner-container">
+                                    <a href="#" title="LeftBanner 1">
+                                        <img src="/modules/tm_leftbanner/views/img/left-banner-1.jpg" alt="LeftBanner 1" title="LeftBanner 1" />
+                                    </a>
+                                </li>
+                            </ul>
+                            <div className="block hidden-lg-up">
+                                <h4 className="block_title hidden-lg-up" data-target="#block_banner1_toggle" data-toggle="collapse">banner
+                                    <span className="pull-xs-right">
+                                        <span className="navbar-toggler collapse-icons">
+                                            <i className="material-icons add">&#xE313;</i>
+                                            <i className="material-icons remove">&#xE316;</i>
+                                        </span>
+                                    </span>
+                                </h4>
+                                <div className="col-md-12 col-xs-12 block_content collapse" id="block_banner1_toggle">
+                                    <ul>
+                                        <li className="slide tmleftbanner-container">
+                                            <a href="#" title="LeftBanner 1">
+                                                <img src="/modules/tm_leftbanner/views/img/left-banner-1.jpg" alt="LeftBanner 1" title="LeftBanner 1" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div id="content-wrapper" className="left-column col-xs-12 col-sm-8 col-md-9">
+                        <section id="main">
+                            <section id="content" className="page-content card card-block">
+
+                                <section className="contact-form">
+                                    <form action="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact" method="post" enctype="multipart/form-data">
+                                        <section className="form-fields">
+                                            <div className="form-group row">
+                                                <div className="col-md-9 col-md-offset-3">
+                                                    <h3>Contact us</h3>
+                                                </div>
+                                            </div>
+                                            <div className="form-group row">
+                                                <label className="col-md-3 form-control-label">Subject</label>
+                                                <div className="col-md-6">
+                                                    <select name="id_contact" className="form-control form-control-select">
+                                                        <option value="2">Customer service</option>
+                                                        <option value="1">Webmaster</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div className="form-group row">
+                                                <label className="col-md-3 form-control-label">Email address</label>
+                                                <div className="col-md-6">
+                                                    <input className="form-control" name="from" type="email" value="" placeholder="your@email.com">
+                                                </div>
+                                            </div>
+                                            <div className="form-group row">
+                                                <label className="col-md-3 form-control-label">Attachment</label>
+                                                <div className="col-md-6">
+                                                    <input type="file" name="fileUpload" className="filestyle" data-buttonText="Choose file">
+                                                </div>
+                                                <span className="col-md-3 form-control-comment">
+                                                    optional
+                                                </span>
+                                            </div>
+                                            <div className="form-group row">
+                                                <label className="col-md-3 form-control-label">Message</label>
+                                                <div className="col-md-9">
+                                                    <textarea className="form-control" name="message" placeholder="How can we help?" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                            <div className="form-group row">
+                                                <div className="offset-md-3">
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <footer className="form-footer text-xs-right">
+                                            <style>
+                                                input[name=url] {
+                                                    display: none !important;
+                                                }
+                                            </style>
+                                            <input type="text" name="url" value="" />
+                                            <input type="hidden" name="token" value="f27ccc9e94396c3e417d71720cfc3ae3" />
+                                            <input className="btn btn-primary" type="submit" name="submitMessage" value="Send">
+                                        </footer>
+                                    </form>
+                                </section>
+
+                            </section>
+                            <footer className="page-footer">
+
+                            </footer>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div className="footer-before">
+                <div className="container">
+
+
+                    <div className="block_newsletter block col-lg-12 col-md-12 col-sm-12">
+                        <h4 className="block_title">Subscribe To Nesletter
+                        </h4>
+                        <div className="col-md-7 col-xs-12">
+                            <form action="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php#footer" method="post">
+                                <div className="col-xs-12">
+                                    <div className="input-wrapper">
+                                        <input name="email" type="email" value="" placeholder="Your email address" aria-labelledby="block-newsletter-label">
+                                    </div>
+                                    <input className="btn btn-primary pull-xs-right hidden-xs-down" name="submitNewsletter" type="submit" value="Subscribe">
+                                    <input className="btn btn-primary pull-xs-right hidden-sm-up" name="submitNewsletter" type="submit" value="OK">
+                                    <input type="hidden" name="action" value="0">
+                                    <div className="clearfix"></div>
+                                </div>
+                                <div className="col-xs-12">
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div className="footer-container">
+                <div className="footer container">
+
+
+                    <div className="block-contact footer-block col-xs-12 col-sm-4 links wrapper">
+                        <h3 className="text-uppercase block-contact-title hidden-md-down"><a href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=stores">Store information</a></h3>
+                        <div className="title clearfix hidden-lg-up" data-target="#block-contact_list" data-toggle="collapse">
+                            <span className="h3">Store information</span>
+                            <span className="pull-xs-right">
+                                <span className="navbar-toggler collapse-icons">
+                                    <i className="material-icons add">&#xE145;</i>
+                                    <i className="material-icons remove">&#xE15B;</i>
+                                </span>
+                            </span>
+                        </div>
+                        <ul id="block-contact_list" className="collapse">
+                            <li>
+                                <i className="material-icons">&#xE55F;</i>
+                                <span className="contactdiv"> Demo Store<br />42 Puffin street 12345 Puffinville france<br />United States</span>
+                            </li>
+                            <li>
+                                <i className="material-icons">&#xE324;</i>
+                                Call us: <span>0123-456-789</span>
+                            </li>
+                            <li>
+                                <i className="material-icons">&#xE554;</i>
+                                Email us: <a href="/cdn-cgi/l/email-protection#0576646960457c6a7077666a6875646b7c2b666a68" className="dropdown"><span className="__cf_email__" data-cfemail="7d0e1c11183d0412080f1e12100d1c1304531e1210">[email&#160;protected]</span></a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                    <div className="col-md-4 links block links">
+                        <h3 className="h3 hidden-md-down">Products</h3>
+                        <div className="title h3 block_title hidden-lg-up" data-target="#footer_sub_menu_24254" data-toggle="collapse">
+                            <span className="h3">Products</span>
+                            <span className="pull-xs-right">
+                                <span className="navbar-toggler collapse-icons">
+                                    <i className="material-icons add">&#xE145;</i>
+                                    <i className="material-icons remove">&#xE15B;</i>
+                                </span>
+                            </span>
+                        </div>
+                        <ul id="footer_sub_menu_24254" className="collapse block_content">
+                            <li>
+                                <a id="link-cms-page-1-1" className="cms-page-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_cms=1&amp;controller=cms&amp;id_lang=1" title="Our terms and conditions of delivery">
+                                    Delivery
+                                </a>
+                            </li>
+                            <li>
+                                <a id="link-cms-page-2-1" className="cms-page-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_cms=2&amp;controller=cms&amp;id_lang=1" title="Legal notice">
+                                    Legal Notice
+                                </a>
+                            </li>
+                            <li>
+                                <a id="link-product-page-prices-drop-1" className="cms-page-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=prices-drop" title="Our special products">
+                                    Prices drop
+                                </a>
+                            </li>
+                            <li>
+                                <a id="link-product-page-new-products-1" className="cms-page-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=new-products" title="Our new products">
+                                    New products
+                                </a>
+                            </li>
+                            <li>
+                                <a id="link-product-page-best-sales-1" className="cms-page-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=best-sales" title="Our best sales">
+                                    Best sales
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="col-md-4 links block links">
+                        <h3 className="h3 hidden-md-down">Our company</h3>
+                        <div className="title h3 block_title hidden-lg-up" data-target="#footer_sub_menu_23202" data-toggle="collapse">
+                            <span className="h3">Our company</span>
+                            <span className="pull-xs-right">
+                                <span className="navbar-toggler collapse-icons">
+                                    <i className="material-icons add">&#xE145;</i>
+                                    <i className="material-icons remove">&#xE15B;</i>
+                                </span>
+                            </span>
+                        </div>
+                        <ul id="footer_sub_menu_23202" className="collapse block_content">
+                            <li>
+                                <a id="link-cms-page-4-2" className="cms-page-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_cms=4&amp;controller=cms&amp;id_lang=1" title="Learn more about us">
+                                    About us
+                                </a>
+                            </li>
+                            <li>
+                                <a id="link-cms-page-5-2" className="cms-page-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?id_cms=5&amp;controller=cms&amp;id_lang=1" title="Our secure payment method">
+                                    Secure payment
+                                </a>
+                            </li>
+                            <li>
+                                <a id="link-static-page-contact-2" className="cms-page-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=contact" title="Use our form to contact us">
+                                    Contact us
+                                </a>
+                            </li>
+                            <li>
+                                <a id="link-static-page-sitemap-2" className="cms-page-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=sitemap" title="Lost ? Find what your are looking for">
+                                    Sitemap
+                                </a>
+                            </li>
+                            <li>
+                                <a id="link-static-page-stores-2" className="cms-page-link" href="https://prestashop.templatemela.com/PRS08/PRS080194/PRS01/index.php?controller=stores" title="">
+                                    Stores
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+                    <div id="tmtestimonialcmsblock" className="col-md-4 links block links">
+                        <h4 className="h3 hidden-md-down">what client say</h4>
+                        <div className="title h3 block_title hidden-lg-up" data-target="#testimonialtoggle" data-toggle="collapse">
+                            <span className="h3">client says</span>
+                            <span className="pull-xs-right">
+                                <span className="navbar-toggler collapse-icons">
+                                    <i className="material-icons add">&#xE145;</i>
+                                    <i className="material-icons remove">&#xE15B;</i>
+                                </span>
+                            </span>
+                        </div>
+                        <div className="testimonial_inner block_content collapse" id="testimonialtoggle">
+                            <div className="customNavigation"><a className="btn prev tmtestimonial_prev"> prev</a> <a className="btn next tmtestimonial_next">next</a></div>
+                            <div className="testimonial-inner">
+                                <div id="testimonial-carousel" className="testimonial-carousel tt-carousel owl-carousel owl-theme">
+                                    <div className="item">
+                                        <div className="cms_face">
+                                            <div className="product_inner_cms">
+                                                <div className="intro">
+                                                    <div className="des">
+                                                        <p className="testdesc">leap electrons typesetting amet populari release Lorem Ipsum is simply dummy text of the.</p>
+                                                    </div>
+                                                    <div className="name"><a href="#">- Jonathan James</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="item">
+                                        <div className="cms_face">
+                                            <div className="product_inner_cms">
+                                                <div className="intro">
+                                                    <div className="des">
+                                                        <p className="testdesc">leap electrons typesetting amet populari release Lorem Ipsum is simply dummy text of the.</p>
+                                                    </div>
+                                                    <div className="name"><a href="#">- Jonathan James</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="item">
+                                        <div className="cms_face">
+                                            <div className="product_inner_cms">
+                                                <div className="intro">
+                                                    <div className="des">
+                                                        <p className="testdesc">leap electrons typesetting amet populari release Lorem Ipsum is simply dummy text of the.</p>
+                                                    </div>
+                                                    <div className="name"><a href="#">- Jonathan James</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div className="footer-after">
+                <div className="container">
+
+
+                    <div id="tmpaymentcmsblock">
+                        <div className="payment block_content">
+                            <p><a href="#"> <img alt="logo.png" src="/img/cms/1.png" /></a></p>
+                            <p><a href="#"> <img alt="logo.png" src="/img/cms/2.png" /></a></p>
+                            <p><a href="#"> <img alt="logo.png" src="/img/cms/3.png" /></a></p>
+                            <p><a href="#"> <img alt="logo.png" src="/img/cms/4.png" /></a></p>
+                            <p><a href="#"> <img alt="logo.png" src="/img/cms/5.png" /></a></p>
+                        </div>
+                    </div>
+
+                    <p className="copyright">
+                        <a href="http://www.prestashop.com">
+                            © 2022 - Ecommerce software by PrestaShop™
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <a className="top_button" href="#" style="">&nbsp;</a>
+        </footer>
+    </main>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script type="text/javascript" src="/assets/js/core.js"></script>
+    <script type="text/javascript" src="/assets/js/theme.js"></script>
+    <script type="text/javascript" src="/modules/productcomments//views/js/jquery.rating.pack.js"></script>
+    <script type="text/javascript" src="/modules/productcomments//views/js/jquery.textareaCounter.plugin.js"></script>
+    <script type="text/javascript" src="/modules/productcomments//views/js/productcomments.js"></script>
+    <script type="text/javascript" src="/modules/stfeature/views/js/stfeature_compare.js"></script>
+    <script type="text/javascript" src="/modules/stfeature/views/js/stfeature_wishlist.js"></script>
+    <script type="text/javascript" src="/modules/tmcouponpop/views/js/tmcouponpop.js"></script>
+    <script type="text/javascript" src="/js/jquery/ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/js/jquery/plugins/fancybox/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="/modules/ps_searchbar/ps_searchbar.js"></script>
+    <script type="text/javascript" src="/modules/ps_shoppingcart/ps_shoppingcart.js"></script>
+    <script type="text/javascript" src="/modules/tm_imageslider/views/js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="/modules/psblog/views/js/lightbox-2.6.min.js"></script>
+    <script type="text/javascript" src="/assets/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="/assets/js/totalstorage.js"></script>
+    <script type="text/javascript" src="/assets/js/lightbox.js"></script>
+    <script type="text/javascript" src="/assets/js/custom.js"></script>
+    <script>
+        (function() {
+            var js = "window['__CF$cv$params']={r:'759f022839103d12',m:'YQAuIJYsQunhNhsrsbQ_8XtkD0aHF6JRrNy.QXvc5.0-1665736808-0-AaFSJe8QNEuAnFITx78n+Sahs+2Q9vqF1lXUr0aneGLAG1//tFj93639W4NIwmopd1ja+IT20pkF5NQfYrz8+SxLgXUrQB5+nErtJLI7hbVgjoIIluF4SXAsCcE/EsKpSolalcbAYey16Oxj4kpJENPn7IDvyIcRJu/DWnb2A63ysTRwGAcDXwNVRqZIgq9Aog==',s:[0x9e3b6df4b5,0x5a85466dd1],u:'/cdn-cgi/challenge-platform/h/g'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/g/scripts/alpha/invisible.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";
+            var _0xh = document.createElement('iframe');
+            _0xh.height = 1;
+            _0xh.width = 1;
+            _0xh.style.position = 'absolute';
+            _0xh.style.top = 0;
+            _0xh.style.left = 0;
+            _0xh.style.border = 'none';
+            _0xh.style.visibility = 'hidden';
+            document.body.appendChild(_0xh);
+
+            function handler() {
+                var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
+                if (_0xi) {
+                    var _0xj = _0xi.createElement('script');
+                    _0xj.nonce = '';
+                    _0xj.innerHTML = js;
+                    _0xi.getElementsByTagName('head')[0].appendChild(_0xj);
+                }
+            }
+            if (document.readyState !== 'loading') {
+                handler();
+            } else if (window.addEventListener) {
+                document.addEventListener('DOMContentLoaded', handler);
+            } else {
+                var prev = document.onreadystatechange || function() {};
+                document.onreadystatechange = function(e) {
+                    prev(e);
+                    if (document.readyState !== 'loading') {
+                        document.onreadystatechange = prev;
+                        handler();
+                    }
+                };
+            }
+        })();
+    </script>
+</body>
+
+</html>

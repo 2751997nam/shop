@@ -1,0 +1,9 @@
+.wrapper-content {
+    background-color: #fff; 
+    /* cursor: pointer;  */
+    border-radius: 0 0 7px 7px; 
+    padding: 14px;
+}
+#btnOpenStyleInfo {
+    margin-left: 5px;
+}

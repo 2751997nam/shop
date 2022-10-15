@@ -1,0 +1,202 @@
+.main-content {
+    --link: #0a66c2;
+    --hover: #222fb9;
+    --bg: #eff0f5;
+
+    background-color: var(--bg);
+    font-family: var(--font);
+    color: var(--black);
+    scrollbar-color: #999 #d1d1d1;
+    scrollbar-width: thin;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.author-page {
+    padding-top: 32px;
+    padding-bottom: 48px
+}
+
+.panel {
+    max-width: 980px;
+    width: 90%;
+    margin: 24px auto;
+}
+.main-header {
+    text-align: left;
+    padding: 0;
+    margin-bottom: 35px;
+}
+
+.control-label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.panel-body {
+    padding: 40px 55px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: 6px;
+}
+
+.login-footer {
+    margin-top: 32px;
+}
+
+.login-footer button {
+    margin-right: 10px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.login-form .form-control {
+    border-radius: 24px;
+    padding: 12px 19px;
+}
+
+.login-footer .button {
+    border-radius: 24px;
+    border: 2px solid var(--link);
+    color: var(--white);
+    background-color: var(--link);
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: border-color 300ms ease-in-out;
+}
+
+.login-footer .button:hover {
+    border: 2px solid #bedeff;
+}
+
+.social-form-gr {
+    user-select: none;
+}
+
+.social-form-gr .social {
+    margin-top: 5px
+}
+
+.social .social-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 24px;
+    padding: 5px 6px;
+    border: 1px solid #fff;
+    margin: 6px 4px 0;
+    font-size: 14px;
+}
+
+.sign-up-link {
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.social .social-link span {
+    margin-left: 6px;
+}
+
+.social .social-link svg {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+}
+.social .facebook {
+    color: #3b5998;
+     border-color: #3b5998;
+}
+.social .facebook:hover {
+    color: #37528c;
+}
+.social .twitter {
+    color: #1daee3;
+    border-color: #1daee3;
+}
+.social .twitter:hover {
+    color: #1ca4d6;
+}
+.social .google {
+    color: #d34836;
+    border-color: #d34836;
+}
+.social .google:hover {
+    color: #c74534;
+}
+
+label[for="remember"] {
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.login-footer .login {
+    display: block;
+    padding-top: 15px;
+}
+
+.error-input {
+    border-color: #f00 !important;
+    color: #f00 !important;
+}
+
+@media (min-width: 990px) {
+    .login-image {
+        width: 380px;
+    }
+
+    .login-form {
+        width: calc(100% - 380px);
+        padding-left: 48px;
+    }
+}
+
+@media (max-width: 990px) {
+    .panel {
+        width: 92%
+    }
+
+    .panel-body {
+        padding: 12px;
+        flex-wrap: wrap;
+    }
+
+    .login-form {
+        display: block;
+        width: 100%;
+    }
+
+    .btn.btn-link {
+        margin-left: 0;
+    }
+
+    label[for="remember"] + .btn.btn-link {
+        margin-left: auto;
+        font-weight: 400;
+    }
+
+    .form-group.flex-b {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 760px) {
+    .author-page {
+        padding: 0;
+    }
+}

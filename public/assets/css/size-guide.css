@@ -1,0 +1,237 @@
+/* The Modal (background) */
+#SizeGuideModal.modal, #StyleInfoModal.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+#SizeGuideModal .sg-modal-content, #StyleInfoModal .modal-content {
+    background-color: var(--light);
+    margin: auto;
+    padding: var(--middle-padding);
+    border: 1px solid var(--flash);
+    width: 80%;
+    position: relative;
+    border-radius: 5px;
+    box-shadow:  0 8px 10px -5px rgb(0 0 0 / 20%), 0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 10%)
+}
+
+/* The Close Button */
+.close {
+    color: var(--gray);
+    font-size: 28px;
+    position: absolute;
+    top: 0;
+    right: var(--small-padding);
+    line-height: 1;
+}
+
+.modal-md {
+    max-width: 940px;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--black);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#sizeGuideTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#sizeGuideTable th, #sizeGuideTable td {
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+    /* border-bottom: 1px solid #ddd; */
+}
+
+#sizeGuideTable td {
+    border-bottom: 1px solid #ddd;
+}
+
+.size-guide-detail {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    display: block;
+    line-height: 1;
+}
+
+/* #emptySizeGuide, #groupButtonUnit {
+display: none;
+} */
+
+#emptySizeGuide {
+    padding: 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-3 {
+    margin-bottom: 17px;
+}
+
+.open-size-guide-pop {
+    overflow: hidden;
+}
+
+.guide-header-top.active {
+    height: 80px    ;
+}
+.size-guide-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+    background-color: #333;
+    /* justify-content: space-between; */
+    border-radius: 7px 7px 0 0;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.sub-size-guide-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    background-color: #2a99d6;
+    border-radius: 0;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.sub-size-guide-list li {
+    min-width: fit-content;
+    font-weight: 500;
+    color: #fff;
+}
+
+.guide-menu-item {
+    position: static;
+    min-width: fit-content;
+}
+
+.guide-menu-item.selected>span{
+    color: #2a99d6;
+} 
+
+.guide-menu-item-link,
+.guide-sub-menu-item-link {
+    padding: var(--small-padding) var(--middle-padding);
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide-menu>li>span:hover {
+    color: #2a99d6;
+}
+
+.sub-size-guide-list li:hover span, .sub-size-guide-list li.selected span {
+    color: #000;
+}
+
+
+#SizeGuideModal table {
+    max-width: 100% !important;
+    height: auto !important;
+    border: none;
+    border-collapse: collapse;
+    /* background-color: #fafafa;
+    border-radius: 5px; */
+    width: 100%;
+}
+
+#SizeGuideModal table th {
+    text-align: left;
+}
+
+#SizeGuideModal table tr {
+    border-bottom: 1px solid #d0d0d0;
+}
+
+#SizeGuideModal table th,
+#SizeGuideModal table td {
+    border: none;
+    padding: var(--small-padding) var(--middle-padding);
+}
+
+#SizeGuideModal table td {
+    font-weight: bold;
+    color: #2a99d6;
+    text-transform: uppercase;
+}
+
+
+#sizeGuideDisplayZone {
+    background-color: #fff; 
+    /* cursor: pointer;  */
+    border-radius: 0 0 7px 7px; 
+    padding: 14px;
+}
+
+.flexSizeGuide {
+    display: flex; 
+}
+
+#SizeGuideModal table td, #SizeGuideModal table th{
+    text-align: center;
+}
+
+#SizeGuideModal table td:first-child, #SizeGuideModal table th:first-child{
+    text-align: left;
+}
+
+#btnChangeUnit {
+    margin-left: auto; padding: 3px 6px;
+}
+
+.disable-click {
+    opacity: 0.3;
+}
+
+.btn-change-size-guide-type {
+    border-radius: 24px;
+}
+
+@media (max-width: 800px) { 
+    .modal-content {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 500px) { 
+    .flexSizeGuide {
+        display: block; 
+    }
+    .ilu-image {
+        display: none;
+    }
+}

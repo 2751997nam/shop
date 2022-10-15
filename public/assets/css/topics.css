@@ -1,0 +1,183 @@
+.js-topics-page {
+    position: relative;
+    padding: var(--middle-padding) 0;
+}
+.sorter-list {
+    padding: 6px 12px;
+    font-weight: 400;
+    user-select: none;
+    background-color: var(--light);
+}
+
+.topics-head {
+    margin-right: 16px;
+    font-weight: 500;
+}
+
+.sorter-item span {
+    padding: 4px 10px;
+    cursor: pointer;
+    display: block;
+    user-select: none
+}
+
+
+.sorter-item.active {
+    background-color: rgba(255 255 255 / 80%);
+    color: var(--secondary);
+}
+
+.sorter-list-tag {
+    margin-top: var(--middle-padding);
+    padding-top: var(--middle-padding);
+}
+
+.sorter-list-tag + .sorter-list-tag {
+    border-top: 1px solid var(--flash)
+}
+
+.list-tag-result {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(140px + (200 - 140) * ((100vw - 300px)/(1920 - 300))), 1fr));
+    grid-gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.close-char {
+    display: none
+}
+
+@media (min-width: 1100px) {
+    .topics-top {
+        background-color: #fff;
+        transition: background-color 300ms ease-in-out;
+        padding: 1px;
+    }
+
+    .topics-top.sticky {
+        background-color: var(--light);
+        position: sticky;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        transition: box-shadow 300ms ease-in-out;
+    }
+
+    .sorter-item:hover span {
+        background-color: var(--flash);
+    }
+
+    .sorter-item:focus span {
+        background-color: var(--flash);
+    }
+}
+
+@media (max-width: 992px) {
+    .click-choose {
+        display: block;
+        font-weight: 400;
+        padding: var(--small-padding) 10px;
+        transition: var(--trans);
+        background-color: var(--white);
+    }
+
+    .click-choose span {
+        padding: var(--small-padding) 10px;
+        display: block;
+        border-radius: 44px;
+        border: 2px solid var(--flash);
+        font-weight: 400;
+        background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%);
+        background-position: calc(100% - 21px) var(--middle-padding), calc(100% - var(--middle-padding)) var(--middle-padding), calc(100% - var(--middle-padding));
+        background-size: 5px 5px, 5px 5px, 1px calc(100% - var(--middle-padding));
+        background-repeat: no-repeat;
+    }
+
+    .topics-top.sticky .click-choose {
+        box-shadow: 0 0 10px rgba(11 11 11 / 22%);
+    }
+
+    .open-char .js-help-button {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .open-char .topics-top.sticky  .click-choose {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-200px);
+    }
+
+    .select-alphabet {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 11;
+        background-color: var(--white);
+        padding: 10px 10px 80px;
+        width: 100%;
+        pointer-events: none;
+        transform: translateY(150%);
+        transition: transform 300ms ease-in-out;
+        box-shadow: 0 8px 10px -5px rgb(0 0 0 / 26%), 0 16px 24px 2px rgb(0 0 0 / 20%), 0 6px 30px 5px rgb(0 0 0 / 14%)
+    }
+
+    .sorter-bg {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 9;
+        background-color:  rgba(11, 11, 11, 0.3);
+        padding: 10px 10px 80px;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .open-char .select-alphabet {
+        z-index: 1234556;
+        pointer-events: all;
+        transform: translateY(0);
+    }
+
+    .open-chart .js-help-button {
+        display: none;
+    }
+
+    .sorter-list {
+        flex-wrap: wrap;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .topics-head {
+        width: 100%;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    .close-char {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+    }
+
+    .close-char {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        font-size: 21px;
+        opacity: 0.6
+    }
+
+    .open-chart .js-help-button {
+        display: none;
+    }
+}
